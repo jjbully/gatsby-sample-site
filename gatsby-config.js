@@ -30,5 +30,17 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+    // In your gatsby-config.js
+    `gatsby-plugin-emotion`,
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "localHost:8080",
+        protocol: "http",
+        hostingWPCOM: false,
+        useACF: true,
+      },
+    },
+  ]
 }
+
